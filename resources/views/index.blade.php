@@ -14,14 +14,14 @@
         <body>
           @foreach ($trains as $train)
               <h1>{{$train->agency}}</h1>
-              <p>{{$train->departure_station}}</p>
-              <p>{{$train->arrival_station}}</p>
-              <p>{{$train->departure_time}}</p>
-              <p>{{$train->arrival_time}}</p>
-              <p>{{$train->code_train}}</p>
-              <p>{{$train->number_carriages}}</p>
-              <p>{{$train->in_time}}</p>
-              <p>{{$train->deleted}}</p>
+              <p>Stazione di Partenza: {{$train->departure_station}}</p>
+              <p>Stazione di arrivo: {{$train->arrival_station}}</p>
+              <p>Orario di partenza: {{$train->departure_time}}</p>
+              <p>Orario di arrivo: {{$train->arrival_time}}</p>
+              <p>Codice treno:{{$train->code_train}}</p>
+              <p>Numero Carrozze: {{$train->number_carriages}}</p>
+              <p>In Orario: {{$train->in_time}}</p>
+              <p>Cancellato: {{$train->deleted}}</p>
           @endforeach
         </body>
         
