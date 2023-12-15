@@ -20,8 +20,20 @@
               <p>Orario di arrivo: {{$train->arrival_time}}</p>
               <p>Codice treno:{{$train->code_train}}</p>
               <p>Numero Carrozze: {{$train->number_carriages}}</p>
-              <p>In Orario: {{$train->in_time}}</p>
-              <p>Cancellato: {{$train->deleted}}</p>
+              <p>
+                @if($train->in_time == 0)
+                  In Orario: no
+                @else
+                  In Orario: si
+                @endif
+              </p>
+              <p>
+                @if($train->in_time == 0)
+                  Cancellato: si
+                @else
+                  Cancellato: no
+                @endif
+              </p>
           @endforeach
         </body>
         
